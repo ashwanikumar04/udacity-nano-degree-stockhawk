@@ -27,7 +27,6 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import in.ashwanik.retroclient.service.RetroClientServiceGenerator;
-import in.ashwanik.retroclient.utils.Json;
 import in.ashwanik.udacitystockhawk.R;
 import in.ashwanik.udacitystockhawk.activity.GraphActivity;
 import in.ashwanik.udacitystockhawk.activity.MainActivity;
@@ -81,7 +80,6 @@ public class MainActivityFragment extends BaseFragment {
 
     @Subscribe
     public void onEvent(final StockResultEvent event) {
-        logDebug(Json.serialize(event));
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -248,6 +246,7 @@ public class MainActivityFragment extends BaseFragment {
                 noData.setVisibility(View.VISIBLE);
                 return;
             }
+            EventBus.getDefault().post(new StockResultEvent(null, StockTaskService.INIT, -1, false));
             fetchData(TextUtils.join(",", BaseApplication.getInstance().getStocks()), -1, StockTaskService.INIT);
         } else {
             snackbar = showSnackBar(new View.OnClickListener() {

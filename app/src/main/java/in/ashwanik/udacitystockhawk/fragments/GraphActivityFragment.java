@@ -15,6 +15,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.AxisValueFormatter;
 import com.github.mikephil.charting.formatter.FormattedStringCache;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.text.SimpleDateFormat;
@@ -120,6 +121,13 @@ public class GraphActivityFragment extends BaseFragment {
         data.setValueTextColor(Color.WHITE);
         data.setValueTextSize(9f);
         lineChart.setData(data);
+        List<ILineDataSet> sets = lineChart.getData()
+                .getDataSets();
+
+        for (ILineDataSet iSet : sets) {
+            LineDataSet set = (LineDataSet) iSet;
+            set.setDrawCircles(true);
+        }
         lineChart.invalidate();
         return view;
     }
