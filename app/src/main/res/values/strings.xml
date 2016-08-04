@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Stock Hawk</string>
+    <string name="action_settings">Settings</string>
+    <string name="noData">Please add stocks.</string>
+    <string name="refresh">Refresh</string>
+    <string name="delete">Delete</string>
+    <string name="showChange">Show Change</string>
+    <string name="showChangePercentage">Show Change Percentage</string>
+
+    <string name="symbol_search">Symbol Search</string>
+    <string name="content_test">Search for a Stock Symbol</string>
+    <string name="input_hint">FB</string>
+    <string name="input_prefill"></string>
+    <string name="add_new_stock">Add New Stock</string>
+    <string name="empty_stock">Please enter a stock to search.</string>
+    <string name="stock_already_saved">This stock is already saved</string>
+    <string name="not_valid_stock">is not a valid stock.</string>
+
+</resources>
