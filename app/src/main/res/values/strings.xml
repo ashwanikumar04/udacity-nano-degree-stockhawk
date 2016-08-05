@@ -15,5 +15,7 @@
     <string name="empty_stock">Please enter a stock to search.</string>
     <string name="stock_already_saved">This stock is already saved</string>
     <string name="not_valid_stock">is not a valid stock.</string>
+    <string name="no_internet_error">Internet is not available to fetch stock details.</string>
+    <string name="retry">Retry</string>
 
 </resources>

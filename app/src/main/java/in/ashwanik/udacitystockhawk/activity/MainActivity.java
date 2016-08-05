@@ -80,7 +80,7 @@ public class MainActivity extends BaseActivity {
             Helpers.d(BaseApplication.LOG, "View is null");
             return null;
         }
-        return Snackbar.make(view, "Internet is not available to fetch stock details.", Snackbar.LENGTH_INDEFINITE)
-                .setAction("Retry", onClickListener);
+        return Snackbar.make(view, getString(R.string.no_internet_error), Snackbar.LENGTH_INDEFINITE)
+                .setAction(getString(R.string.retry), onClickListener);
     }
 }
